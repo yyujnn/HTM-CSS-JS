@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01 board</title>
+    <style>
+        table {
+            width: 400px;
+        }
+
+        tr.title {
+            height: 50px;
+            background-color: gray;
+
+        }
+
+        tr.title>td {
+            text-align: left;
+        }
+
+        tr.content {
+            height: 35px;
+            background-color: whitesmoke;
+        }
+
+        td.tdAlign {
+            text-align: right;
+
+        }
+
+        td#formContent {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="#">
+        <table>
+            <tr class="title">
+                <td colspan="2"><b>step1 : 아이디/비번 입력</b></td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">아이디:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">비밀번호:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">비밀번호 확인:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr class="title">
+                <td colspan="2"><b>step2 : 개인정보</b></td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">성별:</td>
+                <td>
+                    남<input type="radio" name="gender" value="남">
+                    여<input type="radio" name="gender" value="여">
+                </td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">혈액형:</td>
+                <td>
+                    <select>
+                        <option value="">A형</option>
+                        <option value="">B형</option>
+                        <option value="">O형</option>
+                        <option value="">AB형</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">생일:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr class="title">
+                <td colspan="2"><b>step3 : 선호도</b></td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">취미:</td>
+                <td>
+                    축구<input type="checkbox">
+                    야구<input type="checkbox">
+                    농구<input type="checkbox">
+                </td>
+            </tr>
+            <tr class="content">
+                <td class="tdAlign">좋아하는 색깔:</td>
+                <td>
+                    <input type="color">
+                </td>
+            </tr>
+            <tr class="title">
+                <td colspan="2"><b>step4 : 적고 싶은 말</b></td>
+            </tr>
+            <tr class="content">
+                <td colspan="2">
+                    <textarea cols="60" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr class="content">
+                <td id="formContent" colspan="2">
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <form method="get" action="#">
+        <table border="1px solid black">
+            <tr>
+                <td align="center">이름</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td align="center">성별</td>
+                <td align="center"><input type="radio" name="gender" value="여">여자
+                    <input type="radio" name="gender" value="남">남자</td>
+            </tr>
+            <tr>
+                <td align="center">좋아하는 음식</td>
+                <td align="center">
+                    <input type="checkbox">햄버거
+                    <input type="checkbox">피자
+                    <input type="checkbox">치킨</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

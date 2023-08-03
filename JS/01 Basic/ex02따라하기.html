@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02 따라하기</title>
+</head>
+
+<body>
+
+    <a href="#">안녕하세요!</a>
+    <!-- a, button 태그는 span 태그처럼 영역만 : 개행 필요 -->
+    <br><br>
+    <button id="btn1">변경하기 💗</button>
+    <button id="btn2">돌아가기 ⭐</button>
+    <br>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <h1>오늘은 4월 3일! </h1>
+    <p>즐거운 자바스크립트 시간입니다 😎</p>
+
+
+    <script>
+        // 첫번째 버튼을 클릭했을 때 발생하는 이벤트
+        // 배경 -> black, 글씨색 -> white
+        document.getElementById('btn1').addEventListener('click', () => {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white'
+            // 태그 선택자 : 태그 이름으로 가져오기
+        })
+
+        // 두번째 버튼을 클릭했을 때 발생하는 이벤트
+        // 배경 -> white, 글씨색 -> black
+        document.getElementById('btn2').addEventListener('click', () => {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black'
+            // 태그 선택자 : 태그 이름으로 가져오기
+        })
+    </script>
+</body>
+
+</html>

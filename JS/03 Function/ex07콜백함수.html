@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <!-- button.btn -->
+    <button class="btn">click!</button>
+
+    <script>
+        // Callback 함수
+        // 어떤 이벤트가 발생했거나, 특정 시점에 도달했을 때
+        // 시스템에서 호출하는 함수
+        // 함수에 파라미터로 들어가는 함수
+
+        // 1. 이벤트 발생 : addEventListener()
+        document.querySelector('.btn').addEventListener('click', ()=>{
+            console.log('🧁');
+        })
+        // 2. 시간 지연 : setTimeout(실행될로직, 시간정보)
+        console.log('🥨');
+        setTimeout(()=>{
+            console.log('🥂');
+        },2500)
+        console.log('🍰');
+
+    </script>
+
+</body>
+</html>

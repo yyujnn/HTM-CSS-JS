@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parents {
+            width: 400px;
+            height: 400px;
+            background-color: aliceblue;
+        }
+
+        #parents>div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #B1 {
+            background-color: lightblue;
+            position: absolute;
+        }
+
+        #B2 {
+            background-color: thistle;
+            position: absolute;
+            left: 100px;
+        }
+
+        #B3 {
+            background-color: palegoldenrod;
+            position: absolute;
+            left: 200px;
+        }
+
+        #B4 {
+            background-color: palevioletred;
+            position: absolute;
+            left: 300px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #main {
+            width: 700px;
+            height: 700px;
+            margin: 50px;
+            background-color: lightgray;
+        }
+
+        #parents{
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Position 실습</h1>
+        <div id="parents">
+            <div id="B1"></div>
+            <div id="B2"></div>
+            <div id="B3"></div>
+            <div id="B4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

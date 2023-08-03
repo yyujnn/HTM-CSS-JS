@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #redBox {
+            background-color: rosybrown;
+        }
+
+        #blueBox {
+            background-color: lightblue;
+        }
+
+        #greenBox {
+            background-color: lightgreen;
+        }
+
+        #grayBox {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="redBox"> </div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+
+    <button onclick="moveFunc()">이동하기!</button>
+    <button onclick="circleFunc()">둥글게</button>
+
+    <script>
+        // 1. div 요소 각각 가져오기
+        let redVal = document.getElementById('redBox');
+        let blueVal = document.getElementById('blueBox');
+        let greenVal = document.querySelector('#greenBox');
+        let grayVal = document.querySelector('#grayBox');
+
+        // 2. 이동하기 버튼 클릭 시 이동 형태로
+        const moveFunc = () => {
+            blueVal.style.marginLeft = '100px';
+            greenVal.style.marginLeft = '200px';
+            grayVal.style.marginLeft = '300px';
+        }
+
+        // div 요소들 가져오기
+        let divList = document.querySelectorAll('div');
+        for(let i=0;i<divList.length;i++){
+            console.log(divList[i]);
+        }
+
+
+
+        // 3. 둥글게 버튼 클릭 시 모서리 둥글게
+        const circleFunc = () => {
+            // 왼쪽아래, 오른쪽 위
+            // redVal.style.borderBottomLeftRadius = '50%';
+            // redVal.style.borderTopRightRadius = '50%';
+
+            // blueVal.style.borderBottomLeftRadius = '50%';
+            // blueVal.style.borderTopRightRadius = '50%';
+
+            // greenVal.style.borderBottomLeftRadius = '50%';
+            // greenVal.style.borderTopRightRadius = '50%';
+
+            // grayVal.style.borderBottomLeftRadius = '50%';
+            // grayVal.style.borderTopRightRadius = '50%';
+
+            // querySelectorAll -> 반환객체 : nodeList
+            divList.forEach(element=>{
+                element.style.borderBottomLeftRadius='50%';
+                element.style.borderTopRightRadius='50%';
+            })
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

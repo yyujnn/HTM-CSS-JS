@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like practice</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <button class="likeBtn">좋아요 💗</button>
+    <span class="">0</span>
+    <br><br>
+    <input type="text">
+    <button class="textBtn">댓글 작성 ✍🏻 </button>
+    <br>
+    <div class="container">
+        <p>
+            첫 댓글
+            <button class="removeBtn">삭제 ❌</button>
+        </p>
+    </div>
+
+    <script>
+        // 속성 추가, 제거 관련
+        // attr(추가할 속성, 속성의 값) : 속성 추가 메소드
+        // removeAttr(제거할 속성) : 속성 제거 메소드
+        // removeClass(클래스이름) : 클래스 속성 제거 메소드
+        // $(A).prepend(B) : B를 A의 첫번째 위치에 추가 메소드
+        // $(A).append(B) : B를 A의 마지막 위치에 추가 메소드
+
+        // input 관련
+        // val() : input 입력 값 접근 (JS --> value 속성)
+        // input 안의 값 비워주기 : input 반환객체.val('')
+
+        // 부모 관련
+        // parent() : 가장 가까운 부모 요소 선택
+        // parents() : 모든 부모 요소 선택
+        // closest(원하는 요소) : 모든 부모 요소 대상 원하는 요소 접근 가능
+
+
+        // 1. 좋아요 버튼 클릭 시
+        // 좋아요 -> 좋아요 취소
+        // 0 ->1
+        $(document).on('click','.likeBtn',e=>{
+            console.log('work');
+            $(e.target).text('좋아요 취소 💔');
+            $('.likeBtn+span').text('1');
+            // 클래스 값 dislikeBtn 추가
+            $(e.target).attr('class', 'dislikeBtn');
+            // 클래스 값 likeBtn 삭제 
+            $(e.target).removeClass('likeBtn');
+        })
+
+        // 2. 좋아요 취소 버튼 클릭 시
+        // 좋아요 취소 -> 좋아요
+        // 1 -> 0
+        $(document).on('click','.dislikeBtn',e=>{
+            console.log('work');
+            $(e.target).text('좋아요 💗');
+            $('.dislikeBtn+span').text('0');
+            // 클래스 속성 삭제
+            $(e.target).removeAttr('class');
+            바보
+            
+            // 클래스 값 likeBtn 추가
+            $(e.target).attr('class', 'likeBtn');
+            $(e.target).remove
+        })
+         
+        //3. 댓글 작성 버튼 클릭시
+        // 댓글 + 삭제버튼 생성
+        $(document).on('click','.textBtn',()=>{
+            let textVal = $('input').val();
+            console.log(textVal);
+
+            $('.container').append(`
+            <p>
+                ${textVal}
+                <button class="removeBtn">삭제 ❌</button>    
+            </p>
+            `)
+            // 3-1. input 안의 값 비워주기
+            $('input').val('');
+        })
+
+        // 4. 삭제 버튼 클릭 시
+        // 댓글 + 삭제버튼 삭제 
+        $(document).on('click','.removeBtn',e=>{
+            // .remove
+            // $('p').remove(); // 댓글을 전부 지워버림!
+            // $(e.target).parent().remove();
+            // $(e.target).parents().remove();
+            $(e.target).closest('p').remove();
+        })
+
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

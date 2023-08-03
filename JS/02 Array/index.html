@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 Array</title>
+</head>
+<body>
+    <!-- 🧡 배열 -->
+    <script src="ex01배열.js"></script>
+
+    <!-- 🧡 배열 반복문 -->
+    <!-- <script src="ex02배열반목문.js"></script> -->
+
+    <!-- 🧡 배열 실습 -->
+    <!-- <script src="ex03최댓값실습.js"></script> -->
+    <!-- <script src="ex04홀수실습.js"></script> -->
+
+    <!-- 🧡 배열 함수 -->
+    <!-- <script src="ex05배열함수.js"></script> -->
+
+    
+</body>
+</html>
+
+<!--  복습
+    
+배열 : 여러 변수를 하나의 묶음으로 다루는 구조
+
+배열의 선언
+let nameList = [];
+let nameList = new Array();
+
+배열의 생성
+let nameList = [1,2,3];
+let nameList = new Array(1,2,3);
+
+배열의 데이터
+** 인덱스
+1 -> nameList[0]
+nameList[3] = 4;
+
+배열의 길이
+nameList.length
+
+
+
+배열 반복문
+
+(1) for문
+for (let i=0; i<list.length; i++){
+    console.log(list[i]);
+}
+
+(2) for of문
+for (let i of list) {
+    console.log(i);
+}
+
+(3) forEach문
+list.forEach((element, index)=>{
+    console.log(index, element);
+})
+** index : 인덱스번호
+** element : 배열안데이터
+
+
+
+배열 함수
+
+마지막 데이터 추가 : push()
+마지막 데이터 삭제 : pop()
+첫번째 데이터 추가 : unshift()
+첫번째 데이터 삭제 : shift()
+
+** 원하는 위치에 데이터 추가 또는 삭제 : splice(1,2,3)
+1 -> 원하는 위치 인덱스 번호
+2 -> 삭제할 데이터 개수 (삭제X : 0)
+3 -> 추가할 데이터 (추가X : 생략) -->

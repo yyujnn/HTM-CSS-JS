@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력폼</title>
+</head>
+
+<body>
+    <!-- 
+        form 태그 
+        웹페이지에서 입력폼을 만들 때 사용하는 태그
+        사용자에게 정보를 받아주는 태그
+        필수 속성 : method(전달 방식), action(전달 위치)
+
+        input 태그의 속성
+        - type : 입력하는 값의 종류 (text, password)
+        - name : 입력한 값으로 구분하기 위해 이름을 지정 (나만 볼 수 있는 name)
+        - planceholder : 미리보기 텍스트 (알려주기)
+        - actofocus : 자동 커서 설정
+        - readonly : 읽기 전용 지정
+    -->
+
+    <!-- # : 기본값 -->
+    <form method="get" action="#">
+        ID <input type="text" name="id" maxlength="10" autofocus placeholder="smhrd"> <br>
+        PW <input type="password" name="pw"> <br>
+        강의실 <input type="text" value="2강의장" readonly><br>
+        <!-- 
+            value : 값 넣어줄 수 있음 / readonly : 값 변경 불가  
+            maxlength : 글자수 제한 
+        -->
+        <!-- (1) select : option이라고 하는 태그가 필요 -->
+        <!-- value : 기능단으로 넘겨줄 때 필요한 값 -->
+        <select>
+            <option value="">색상 선택</option>
+            <option value="red">빨강</option>
+            <option value="blue">파랑</option>
+            <option value="yellow">노랑</option>
+            <option value="green">초록</option>
+        </select>
+        <br>
+        <!-- (1) checkbox : 중복 선택 가능 -->
+        <input type="checkbox" name="fruits" value="str">딸기
+        <input type="checkbox" name="fruits" value="gra">포도
+        <input type="checkbox" name="fruits" value="ban">바나나
+        <br>
+
+        <!-- (2) radio : 중복 선택 불가능 -->
+        <input type="radio" name="gender" value="man">남자
+        <input type="radio" name="gender" value="woman">여자
+
+        <br>
+        <input type="file">
+        <input type="color">
+        <br>
+        <input type="tel">
+        <input type="range">
+        <br>
+        <input type="search">
+        <input type="date" value="2023-03-03">
+        <br>
+        <input type="image">
+        <input type="time">
+        <br>
+
+        <!-- 
+            ★★중요★★
+            제출, 초기화 버튼의 위치는 무조건!! form 태그 내부 
+         -->
+        <input type="reset">
+        <input type="submit" name="">
+
+
+
+    </form>
+
+</body>
+
+</html>
+
